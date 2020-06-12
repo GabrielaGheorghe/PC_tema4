@@ -1,0 +1,20 @@
+GHEORGHE LUMINITA-GABRIELA, 312 CB
+TEMA 4
+
+TASK 1 
+
+	A fost implementat in functia "arrayProduct", functie ce intoarce un pointer de numere intregi si primeste ca parametri un pointer de numere intregi si un numar intreg ce reprezinta lungimea vectorului dat ca parametru. Am initializat si alocat dinamic pointerul intors de catre functie, ce contine, pe fiecare pozitie i, produsul tuturor elementelor din vectorul primit, cu excepția elementului de pe poziția i din vectorul initial. 
+	Pentru a face acest lucru, am parcurs vectorul initial calculand produsul tuturor elementelor acestuia. Apoi, parcurgand vectorul de returnat, am initializat fiecare element de pe pozitia i din noul vector cu catul dintre produsul calculat anterior si elementul de pe pozitia i din vectorul initial.
+
+TASK 2
+
+	Acest task se regaseste in functia "rotateMatrix" ce va returna o matrice de numere intregi si va primi ca parametri o matrice patratica de numere intregi si un numar intreg ce reprezinta dimensiunea matricei data ca parametru.
+	Am declarat matricea ce trebuie returnata si am alocat-o dinamic cu ajutorul functiilor malloc si calloc din biblioteca <stdlib.h>. Am parcurs matricea de returnat, b, si am initializat fiecare element b[i][j] cu matrix[j][matrixSize - 1 - i], ce reprezinta elemente din matricea initiala, aceasta fiind regula prin care un element dintr-o matrice se va roti cu 90 de grade spre stanga.
+
+TASK 3
+
+	In functia "subMatrixesSums" de tip pointer, ce returneaza pointer la un vector si primeste ca parametri o matrice cu elemente numere intregi, un numar intreg ce reprezinta numarul de grupuri de 4 coordonate, si pointerul "queries" care puncteaza catre vectorul unde sunt stocate coordonatele.
+	Am declarat variabila p pe care am initializat-o cu 0, ce reprezinta pozitia initiala din vectorul in care vor fi stocate sumele elementelor submatricei, care va fi incrementata cu 1 pe parcurs ce se termina o suma de calculat.
+	Variabilele e, f, g si h reprezinta pozitiile coordonatelor submatricei din vectorul queries. 
+	Parcurgem fiecare query, iar la finalul fiecaruia initializam S cu zero. Apoi parcurgem matricea initiala care va avea limitele specificate de cele 4 coordonate din query(ce reprezinta o submatrice), dupa care o parcurgem si calculam suma elementelor acesteia, care, spre exemplu, pentru prima submatrice, se va afla pe pozitia zero din vectorul S. Se incrementeaza apoi variabilele e, f, g si h cu 4 pentru a se trece la urmatorul query(fiecare query continand 4 elemente), dar si p pentru ca urmatoarea suma sa fie stocata pe urmatoarea pozitie din vector.
+	
